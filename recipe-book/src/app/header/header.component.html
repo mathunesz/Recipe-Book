@@ -1,0 +1,24 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="navbar-brand" style="cursor: pointer">Livro de Receitas</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li routerLinkActive="active"><a routerLink="/recipes" (click)="changeTab('recipes')">Receitas</a></li>
+                <li routerLinkActive="active"><a routerLink="/shopping-list" (click)="changeTab('shopping-list')">Carrinho de Compras</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown" appDropdown>
+                    <a class="dropdown-toggle" role="button">Administrar <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a>Salvar Dados</a></li>
+                        <li><a>Buscar Dados</a></li>
+                    </ul>
+                </li>
+                <li><button class="btn" style="margin-top: 6px; margin-right: 5px" appLoginButton>Sessão</button></li>
+            </ul>
+        </div>
+    </div>
+</nav>
